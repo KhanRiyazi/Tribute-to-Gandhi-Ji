@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 800px; /* Limit width for readability */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add padding */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav {
+    margin-top: 10px; /* Space between header and nav */
+}
+
+nav button {
+    margin: 0 5px; /* Spacing between buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    font-size: 1rem; /* Font size for buttons */
+    color: white;
+    background-color: #388E3C; /* Darker green for buttons */
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+nav button:hover {
+    background-color: #66BB6A; /* Lighter green on hover */
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50; /* Underline for chapter titles */
+    padding-bottom: 5px;
+}
+
+main {
+    position: relative; /* For absolute positioning of sections */
+    overflow: hidden; /* Prevent overflow during transitions */
+    flex: 1; /* Make main fill the remaining space */
+}
+
+section {
+    padding: 20px;
+    display: none; /* Hide all sections by default */
+    background: white; /* White background for sections */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow effect */
+    margin-bottom: 20px; /* Spacing between sections */
+    height: 100vh; /* Full viewport height */
+    position: absolute; /* Absolute positioning for animation */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    opacity: 0; /* Start with invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+section.active {
+    display: block; /* Show the active section */
+    opacity: 1; /* Make it visible */
+}
+
+footer {
+    margin-top: auto;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Thinner footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 5px solid #4CAF50;
+    background: #e8f5e9;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack navigation links on small screens */
+    }
+    
+    nav button {
+        margin: 5px 0; /* Space for stacked buttons */
+    }
+}
